@@ -6,8 +6,44 @@
       h1 {
         color: red;
       }
+      p {
+        color: blue;
+      }
+      #p1 {
+        font-style: italic;
+      }
+      .boldText{
+        font-weight: bold;
+      }
+       .card{
+         background-color: lightgrey;
+         box-sizing: border-box;
+         border: 5px solid grey;
+         border-radius: 10px;
+         /* offset-x, offset-y, blur-radius, spread-radius, color */
+         box-shadow: 10px 10px 12px 4px rgba(0,0,0,0.5);
+         margin: 24px;
+         padding: 48px;
+      }
      </style>
+  </head>
   <body>
     <h1>This is an example page for Internal CSS.</h1>
+  <p id="p1">Example p tag 1</p>
+  <p class="boldText">Example p tag 2</p>
+  <p class="boldText">Example p tag 3</p>
+
+   <div class="card">
+    This is an example of a card.
+   </div>
+
+
+   <div class="card">
+     This is another example of a card.
+  </div>
+
+  <p class="card">
+     This is a p tag with the card styles.
+  </p>
   </body>
 </html>
