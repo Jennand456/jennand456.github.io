@@ -23,7 +23,7 @@ p {
 
 
    .button {
-     background-color: linear-gradient(to bottom, lightgreen, forestgreen);
+     background: linear-gradient(to bottom, lightgreen, forestgreen);
      border: 3px solid darkgreen;
      border-radius: 6px;
      cursor: pointer;
@@ -35,6 +35,7 @@ p {
 
    .button:hover{
      opacity:0.8;
+     border-radius: 50%;
    }
 
     .button:active {
