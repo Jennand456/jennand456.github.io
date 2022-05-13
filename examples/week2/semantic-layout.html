@@ -1,127 +1,33 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Semantic Layout Examples</title>
+    <title>Semantic Layout Example</title>
     <style>
-      header {
-        background-color: magenta;
-        text-align: center;
-        padding: 48px
-        padding-bottom: 24px
-      }
-     header img {
-       border: 10px solid magenta;
-       border-radius: 50%
+     #header,
+     #nav,
+     #main,
+     #footer {
+       background-color: lightgray;
+       margin: 12px;
+       padding: 24px;
      }
-    nav {
-      background-color: magenta;
-      border-top: 4px; solid white;
-      padding: 12px; 0px;
-    }
-    nav ul {
-      list-style-type: none;
-      padding: 0px;
-      margin: 0px;
-      text-align: center;
-    }
-   nav ul li {
-     display: inline-block;
-     margin: 0px 12px;
-     padding: 12px 8px;
-   }
-   nav ul li a {
-     color: black;
-     display: inline-block;
-     text-decoration: none;
-   }
-  nav ul li:hover {
-     background-color: black;
-  }
-  nav ul li:hover a {
-    color: white;
-  }
 
-  nav ul li:active {
-    background-color: orange;
-  }
-  aside,
-  section {
-    display: inline-block;
-  }
-  aside {
-    padding-top: 12px;
-    vertical-align: top;
-    width: 25%;
-  }
-  section {
-    width: 70%;
-  }
-  footer {
-    background-color: magenta;
-    padding: 12px 24px;
-    text-align: center;
-  }
-     </style>
+     .section {
+       background-color: darkgray;
+       margin: 8px;
+     }
+    </style>
    </head>
   <body>
-    <header>
-     <img src="../../images/nature.jpg" alt="nature"></img>
- <h1>Bubble</h>
-   </header>
-   <nav>
-    <ul>
-      <li><a href="#">Projects</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-   </nav>
-   <main>
-      <aside>
-      <ol>
-        <li>Greeting</li>
-        <li>Conversation</li>
-        <li>Farewell</li>
-      </ol>
-  </aside>
-
-  <section>
-     <h2>General Outline</h2>
-     <p>
-       Aute id voluptate ne iis labore singulis sempiternum. O
-       tamen firmissimum. Constias quae iudicem, quamquam irure
-       laboris incididunt.Cupidatat qui enim. An quae commodo
-       praesentibus, iudicem praetermissum in admodum an ea fugiat
-       proident, ex ab domesticarum. Pariatur qui offendit iis
-       proident malis ingeniis, nostrud ad eram ad legam voluptate
-       exquisitaque te fore se fabulas ex nisi ne se se
-       philosophari id consequat o incididunt eu offendit qui
-       ipsum.
-     </p>
-     <p>
-       Anim incurreret ubi relinqueret, ut ingeniis adipisicing,
-       commodo ut veniam ubi magna laborum qui nescius. Ingeniis
-       duis esse sed amet do eu cillum ingeniis efflorescere est ad
-       ipsum admodum praesentibus aut id quid incurreret
-       cohaerescant. Aliqua aliquip sed constias ex et quid noster
-       sed mentitum ex non export e labore a eram occaecat
-       proident. A enim incididunt fidelissimae.Consequat
-       imitarentur in officia. Sint consectetur laboris amet
-       occaecat ab ita nostrud an deserunt, export ex cernantur a
-       esse in litteris se labore, aliquip noster de cupidatat
-       domesticarum do constias export nescius, velit arbitror hic
-       despicationes non aliquip quorum magna occaecat irure. Ab
-       hic coniunctione ita litteris eram anim ad quorum est
-       aliquip a duis quibusdam, e aliqua malis sed commodo, ipsum
-       aut litteris ne esse ab non illum cupidatat iudicem iis
-       summis incurreret eruditionem an summis singulis ut irure
-       irure. Incurreret quorum quid an dolor id ubi vidisse
-       exquisitaque a occaecat quis ubi fabulas instituendarum ubi
-       quid incurreret id distinguantur, velit incurreret
-       expetendis, probant a quorum ea fore vidisse litteris, ipsum
-       o quamquam si magna.
-     </p>
-      </section>
-   </main>
-   <footer>This is a footer.</footer>
+    <header id="header">
+        <h1>Semantic Layout Example</h1>
+ </header>
+   <nav id="nav">NAVIGATION</nav>
+   <main id="main">
+   <h2>MAIN SECTION</h2>
+    <section class="section">SUBSECTION 1</section>
+    <section class="section">SUBSECTION 2</section>
+  </main>
+  <footer id="footer">FOOTER</footer>
   </body>
 </html>
