@@ -3,15 +3,15 @@
   <head>
     <title>Quiz 3 review</title>
     <style>
-      .box {
-        background-color: skyblue;
-        border: 1px solid black;
-        display: inline-block;
-        padding: 50px;
-        margin-bottom: 36px;
-      }
-      .padding1Value {
-        /* value gets set to all 4 sides */
+    .box {
+      background-color: skyblue;
+      border: 1px solid black;
+      display: inline-block;
+      padding: 50px;
+      margin-bottom: 36px;
+     }
+     .padding1Value {
+       /* value gets set to all 4 sides */
         padding: 24px;
       }
       .padding2values {
@@ -29,6 +29,12 @@
         /* 1st value sets top, and then goes clockwise */
         padding: 12px 24px 36px 72px;
       }
+      .box {
+        background-color: skyblue;
+        border: 1px solid black;
+        display: inline-block;
+      }
+
       .br1value {
         /* 1 value gets set to all 4 corners */
         border-radius: 12px;
@@ -42,37 +48,37 @@
         /* 1st value sets top-left */
         /* 2nd value sets top-right/bottom-left */
         /* 3rd value sets bottom-right */
-        border-radius: 12px 36px 8px;
+        border-radius: 12px 36px 0px;
       }
       .br4values {
         /* 1st value sets top-left */
         /* other corners get set clockwise */
-        border-radius: 12px 50px 10px 10%
+        border-radius: 12px 50% 36px 10%;
       }
       .boxShadowExample {
-        /* offset-x, blur-radius, color */
-        box-shadow: 10px 50px 10px 10px gray:
+        /* offset-x, offset-y, blur-radius, color */
+        box-shadow: 100px 50px 10px 10px gray;
       }
       .linearGradientExample1 {
         /* first value are keyword indicating direction */
         /* other examples are "to bottom left" or "to top" */
         /* remaining values are called color stops */
-        background: linear-gradient(to right,red, yellow, purple):
+        background: linear-gradient(to right, red, yellow, purple);
       }
-      .linearGradientExamlpe2 {
+      .linearGradientExample2 {
         /* first value can be degrees */
         /* color  stops can use percentages to indicate location */
-        background: linear-gradient(45deg, aquamarine 50% blue);
+        background: linear-gradient(45deg, aquamarine 50%, blue);
       }
-      .radialGradientExample{
-        background: radial-gradient(yellow, orange 20% black;)
+      .radialGradientExample {
+        background: radial-gradient(yellow, orange 20%, black);
       }
-      .transparentBox{
+      .transparentBox {
         /* first value specifies red from 0-255 */
         /* second value specifies green from 0-255 */
-        /* third value specifies blue from 0-522 */
+        /* third value specifies blue from 0-255 */
         /* fourth value specifies alpha (transparency) from 0-1 */
-        background-color: rbga(255, 255, 0, 0.5);
+        background-color: rgba(255, 255, 0, 0.5);
         margin: 36px;
       }
    </style>
@@ -91,11 +97,11 @@
     <div class="box boxShadowExample">Box Shadow</div>
     <br>
     <div class="box linearGradientExample1">Linear Gradient 1</div>
-    <div class="box linearGradientExaple2">Linear Gradient 2</div>
+    <div class="box linearGradientExample2">Linear Gradient 2</div>
     <div class="box radialGradientExample">Radial Gradient</div>
     <br>
     <div class="box">
       <div class="box transparentBox">See through</div>
-    </div>                                                                                                                              
+    </div>
   </body>
 </html>
