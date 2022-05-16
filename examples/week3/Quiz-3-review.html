@@ -1,8 +1,101 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>HELLO WORLD</title>
+    <title>Quiz 3 review</title>
+    <style>
+      .box {
+        background-color: skyblue;
+        border: 1px solid black;
+        display: inline-block;
+        padding: 50px;
+        margin-bottom: 36px;
+      }
+      .padding1Value {
+        /* value gets set to all 4 sides */
+        padding: 24px;
+      }
+      .padding2values {
+        /* 1st value sets top/bottom */
+        /* 2nd value set left/right */
+        padding: 12px 36px;
+      }
+      .padding3values {
+        /* 1st value sets top */
+        /* 2nd value sets left/right */
+        /* 3rd value sets bottom */
+        padding: 12px 24px 36px;
+            }
+      .padding4values {
+        /* 1st value sets top, and then goes clockwise */
+        padding: 12px 24px 36px 72px;
+      }
+      .br1value {
+        /* 1 value gets set to all 4 corners */
+        border-radius: 12px;
+      }
+      .br2values {
+        /* 1st value sets top-left/bottom-right */
+        /* 2nd value sets top-right/bottom-left */
+        border-radius: 12px 36px;
+      }
+      .br3values {
+        /* 1st value sets top-left */
+        /* 2nd value sets top-right/bottom-left */
+        /* 3rd value sets bottom-right */
+        border-radius: 12px 36px 8px;
+      }
+      .br4values {
+        /* 1st value sets top-left */
+        /* other corners get set clockwise */
+        border-radius: 12px 50px 10px 10%
+      }
+      .boxShadowExample {
+        /* offset-x, blur-radius, color */
+        box-shadow: 10px 50px 10px 10px gray:
+      }
+      .linearGradientExample1 {
+        /* first value are keyword indicating direction */
+        /* other examples are "to bottom left" or "to top" */
+        /* remaining values are called color stops */
+        background: linear-gradient(to right,red, yellow, purple):
+      }
+      .linearGradientExamlpe2 {
+        /* first value can be degrees */
+        /* color  stops can use percentages to indicate location */
+        background: linear-gradient(45deg, aquamarine 50% blue);
+      }
+      .radialGradientExample{
+        background: radial-gradient(yellow, orange 20% black;)
+      }
+      .transparentBox{
+        /* first value specifies red from 0-255 */
+        /* second value specifies green from 0-255 */
+        /* third value specifies blue from 0-522 */
+        /* fourth value specifies alpha (transparency) from 0-1 */
+        background-color: rbga(255, 255, 0, 0.5);
+        margin: 36px;
+      }
+   </style>
+  </head>
   <body>
-    <h1>This is a basic "Hello World" template for an HTML file.</h1>
+    <div class="box padding1value">Padding 1 Value</div>
+    <div class="box padding2values">Padding 2 Values</div>
+    <div class="box padding3values">Padding 3 Values</div>
+    <div class="box padding4values">Padding 4 Values</div>
+    <br>
+    <div class="box br1value">Border Radius 1 Value</div>
+    <div class="box br2values">Border Radius 2 Values</div>
+    <div class="box br3values">Border Radius 3 Values</div>
+    <div class="box br4values">Border Radius 4 Values</div>
+    <br>
+    <div class="box boxShadowExample">Box Shadow</div>
+    <br>
+    <div class="box linearGradientExample1">Linear Gradient 1</div>
+    <div class="box linearGradientExaple2">Linear Gradient 2</div>
+    <div class="box radialGradientExample">Radial Gradient</div>
+    <br>
+    <div class="box">
+      <div class="box transparentBox">See through</div>
+    </div>                                                                                                                              
   </body>
 </html>
