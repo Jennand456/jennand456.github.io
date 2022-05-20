@@ -1,16 +1,36 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>Jennifer Monthly Bills</title>
+    <title>HTML Monthly Bills</title>
     <style>
+      #monthlyBills,
+      #monthlyBills caption,
+      #monthlyBills th,
+      #monthlyBills td {
+        border: 4px solid white;
+        border-collapse: collapse;
+        padding: 12px;
+      }
+      #tableHead {
+        background-color: lightgray;
+      }
 
+      #column  {
+        background-color: lightblue;
+        border: 4px solid white;
+      }
+
+      #monthlyBills {
+        margin: 50px;
+      }
     </style>
   </head>
   <body>
-    <table id="uglyTable">
-     <caption>Monthly Bills</caption>
+    <h1>Monthly Bills</h1>
+    <table id="monthlyBills">
+     <caption>Jennifer Bills</caption>
      <colgroup>
-       <col id="column" span="1">
+       <col id="column" span="4">
        <col>
        <col>
        <col>
@@ -25,7 +45,7 @@
     </thead>
     <tbody>
      <tr>
-      <td id="tableCell">Phone</td>
+      <td>Phone</td>
       <td>$120</td>
       <td>$140</td>
       <td>$140</td>
