@@ -1,9 +1,187 @@
 <!DOCTYPE html>
 <html lang="en-US">
   <head>
-    <title>HELLO WORLD</title>
+    <title>Layout: Table vs.Float</title>
+    <style>
+    /* CSS common to both layouts*/
+    .header {
+      background-color: lightgreen;
+      padding: 12px 24px;
+    }
+    .nav {
+      padding: 12px 24px;
+    }
+    .nav a {
+      padding-right: 36px;
+    }
+    .content {
+      padding: 36px;
+    }
+    .footer {
+      background-color: green;
+      padding: 12px 24px;
+    }
+    img.cats {
+      float: right;
+      margin-left: 12px;
+      width: 300px;
+    }
+    img.dog2 {
+      float: left;
+      margin-right: 12px;
+      width: 300px;
+    }
+    .clear {
+      clear: both;
+      margin: 48px;
+    }
+    /* CSS specific to the Table Layout */
+    #oldTableLayout {
+      border-collapse: collapse;
+      margin-bottom: 48px;
+    }
+    #oldTableLayout .nav {
+      background-color: #DDFFDD;
+    }
+    /* CSS specific to the Float Layout*/
+    #oldFloatLayout .nav {
+      box-sizing: border-box;
+      float: left;
+      width: 20%;
+    }
+    #oldFloatLayout .content {
+      box-sizing: border-box;
+      float: left;
+      width: 80%;
+    }
+    /* This is the clearfix */
+    #oldFloatLayout .main:after {
+      content:"";
+      display: table;
+      clear: both;
+    }
+    #oldFloatLayout .main {
+      backgroundground: Linear-gradient(to right, #DDFFDD 20%, white 20.0001%);
+    }
+    </style>
   </head>
   <body>
-    <h1>This is a basic "Hello World" template for an HTML file.</h1>
-  </body>
+  <table id="oldTableLayout">
+    <tr>
+      <td class="header" colspan="2">
+      <h>This is how page layouts used to be done (with tables)</h1>
+    </td>
+    </tr>
+    <tr>
+      <td class="nav">
+        <div><a =href"#">Home</a></div>
+        <div><a =href"#">Gallery</a></div>
+        <div><a =href"#">About Me</a></div>
+        <div><a =href"#">Contact</a></div>
+      </td>
+      <td class="content">
+        <img class="cats" src="../../images/cats.jpg" alt="cats">
+        <P>
+          Litteris non amet iudicem do nostrud elit velit et enim,
+          nescius et minim, occaecat id officia. Do id quid duis
+          aliqua, proident duis mentitum. Aliqua quamquam cernantur
+          quo eu et culpa deserunt e possumus te litteris sed enim
+          reprehenderit vidisse legam offendit. Nam elit an tempor qui
+          eiusmod reprehenderit a constias ut sunt occaecat
+          cohaerescant, consequat magna duis ea tempor, multos ne e
+          cillum offendit, eu quo tractavissent, hic veniam de amet id
+          ingeniis nam eram eiusmod.Multos est possumus te elit nam
+          quid quo ingeniis ubi quem id possumus quo tempor ne veniam
+          domesticarum deserunt legam fabulas. Officia duis fabulas,
+          cernantur aute laboris, quem iudicem fidelissimae in export
+          officia ea despicationes. Aut nescius ad cernantur, appellat
+          nulla mandaremus litteris.
+        </P>
+        <div class="clear"></div>
+        <img class="dog2" src="../../images/dog2.jpg" alt="dog2">
+        <P>
+          Quem quamquam de tractavissent, aute voluptatibus offendit
+          cillum cernantur. Cillum fidelissimae nescius enim nescius
+          aut ab ita fidelissimae, e malis sunt e doctrina, iis quis o
+          quid e ne fugiat esse iis ullamco ab mandaremus anim sint ne
+          tamen, sed ea voluptatibus in laborum dolor sed admodum
+          reprehenderit. Probant ad enim, ne excepteur coniunctione,
+          dolore an vidisse ab anim, se quis occaecat, aute laborum
+          singulis ubi quorum o ingeniis ea sint, excepteur quae iis
+          laboris comprehenderit an cernantur fore dolor do amet.Ad id
+          efflorescere, deserunt tractavissent ex eiusmod si eram et
+          litteris iis irure occaecat est quem anim. Se an amet
+          cupidatat ab amet excepteur nam firmissimum ab quo ex sunt
+          sunt elit, commodo se occaecat. Eu ingeniis eruditionem. A
+          quibusdam exercitation, non sunt de aute et ingeniis cillum
+          do nescius eruditionem si ita quae amet multos mentitum,
+          eiusmod eram nescius, incididunt legam est nescius
+          illustriora, non aliqua ab tempor sed mentitum in nisi
+          incurreret.
+        </P>
+      </td>
+    </tr>
+    <tr>
+      <td class="footer" colspan="2">
+        copyright &copy; A3Z CREATIONS 2022
+      </td>
+    </tr>
+  </table>
+
+  <div id="oldFloatLayout">
+    <div class="header">
+      <h1>This is how page layouts used to be done (with floats)</h1>
+    </div>
+    <div class="main">
+      <div class="nav">
+        <div><a =href"#">Home</a></div>
+        <div><a =href"#">Gallery</a></div>
+        <div><a =href"#">About Me</a></div>
+        <div><a =href"#">Contact</a></div>
+    </div>
+    <div class="content">
+      <img class="cats" src="../../images/cats.jpg" alt="cats">
+      <P>
+        Litteris non amet iudicem do nostrud elit velit et enim,
+        nescius et minim, occaecat id officia. Do id quid duis
+        aliqua, proident duis mentitum. Aliqua quamquam cernantur
+        quo eu et culpa deserunt e possumus te litteris sed enim
+        reprehenderit vidisse legam offendit. Nam elit an tempor qui
+        eiusmod reprehenderit a constias ut sunt occaecat
+        cohaerescant, consequat magna duis ea tempor, multos ne e
+        cillum offendit, eu quo tractavissent, hic veniam de amet id
+        ingeniis nam eram eiusmod.Multos est possumus te elit nam
+        quid quo ingeniis ubi quem id possumus quo tempor ne veniam
+        domesticarum deserunt legam fabulas. Officia duis fabulas,
+        cernantur aute laboris, quem iudicem fidelissimae in export
+        officia ea despicationes. Aut nescius ad cernantur, appellat
+        nulla mandaremus litteris.
+      </P>
+      <div class="clear"></div>
+      <img class="dog2" src="../../images/dog2.jpg" alt="dog2">
+      <P>
+        Quem quamquam de tractavissent, aute voluptatibus offendit
+        cillum cernantur. Cillum fidelissimae nescius enim nescius
+        aut ab ita fidelissimae, e malis sunt e doctrina, iis quis o
+        quid e ne fugiat esse iis ullamco ab mandaremus anim sint ne
+        tamen, sed ea voluptatibus in laborum dolor sed admodum
+        reprehenderit. Probant ad enim, ne excepteur coniunctione,
+        dolore an vidisse ab anim, se quis occaecat, aute laborum
+        singulis ubi quorum o ingeniis ea sint, excepteur quae iis
+        laboris comprehenderit an cernantur fore dolor do amet.Ad id
+        efflorescere, deserunt tractavissent ex eiusmod si eram et
+        litteris iis irure occaecat est quem anim. Se an amet
+        cupidatat ab amet excepteur nam firmissimum ab quo ex sunt
+        sunt elit, commodo se occaecat. Eu ingeniis eruditionem. A
+        quibusdam exercitation, non sunt de aute et ingeniis cillum
+        do nescius eruditionem si ita quae amet multos mentitum,
+        eiusmod eram nescius, incididunt legam est nescius
+        illustriora, non aliqua ab tempor sed mentitum in nisi
+        incurreret.
+      </P>
+  </div>
+</div>
+    <div class="footer">
+      copyright &copy; A3Z CREATIONS 2022
+</body>
 </html>
