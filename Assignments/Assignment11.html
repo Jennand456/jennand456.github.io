@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Assignment 11</title>
+    <style>
+      body {
+        font-family: sanserif;
+      }
+      * {
+      box-sizing: border-box;
+      }
+      .flexChild {
+        background-color: teal;
+        border: 3px solid lightgrey;
+        border-radius: 4px;
+        font-size: 30px;
+        font-weight: bold;
+        height: 50px;
+        width: 50px;
+        margin: 10px;
+        padding: 8px 14px;
+      }
+      .flexChildWide {
+        text-align: center;
+        width: 300px;
+     }
+
+     .flexChildTall {
+       height: 100px;
+     }
+     .flexChildGiant {
+       height: 200px;
+     }
+     .flexContainer {
+       background-color: coral;
+       border-radius: 6px;
+       display: flex;
+     }
+     .flexDirection {
+       flex-direction: row-reverse;
+     }
+     .flexWrap {
+       flex-wrap: wrap;
+     }
+    </style>
+ </head>
+  <body>
+    <h2>flex-direction example</h2>
+    <div class="flexContainer flexDirection">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <h2>flex-wrap example</h2>
+    <div class="flexContainer flexWrap">
+      <div class="flexChild">A</div>
+      <div class="flexChild flexChildWide">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild flexChildWide">D</div>
+      <div class="flexChild flexChildWide">E</div>
+      <div class="flexChild">F</div>
+    </div>
+
+  </body>
+</html>
