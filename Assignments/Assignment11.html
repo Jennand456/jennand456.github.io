@@ -4,7 +4,7 @@
     <title>Assignment 11</title>
     <style>
       body {
-        font-family: sanserif;
+        font-family: sans-serif;
       }
       * {
       box-sizing: border-box;
@@ -36,16 +36,23 @@
        border-radius: 6px;
        display: flex;
      }
-     .flexDirection {
+     .flexrowreverse {
        flex-direction: row-reverse;
      }
      .flexWrap {
        flex-wrap: wrap;
      }
+     .flexDirection {
+       flex-direction: column;
+       align-items: flex-end;
+     }
+      .justifyContent {
+       justify-content: space-between;
+      }
     </style>
  </head>
   <body>
-    <h2>flex-direction example</h2>
+    <h2>flex-column example</h2>
     <div class="flexContainer flexDirection">
       <div class="flexChild">A</div>
       <div class="flexChild">B</div>
@@ -61,6 +68,17 @@
       <div class="flexChild flexChildWide">E</div>
       <div class="flexChild">F</div>
     </div>
-
+    <h2>flex-row reverse example</h2>
+    <div class="flexContainer flexrowreverse">
+      <div class="flexChild">A</div>
+      <div class="flexChild">B</div>
+      <div class="flexChild">C</div>
+      <div class="flexChild">D</div>
+    </div>
+    <h2>justify-content example</h2>
+    <div class="flexContainer justifyContent">
+      <div class="flexChild">1</div>
+      <div class="flexChild flexChildWide">2</div>
+      <div class="flexChild">3</div>
   </body>
 </html>

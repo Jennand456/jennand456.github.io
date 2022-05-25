@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Responsive Flexbox Example</title>
+    <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+    }
+    header {
+      background-color: skyblue;
+      font-size: 24px;
+      padding: 12px 48px;
+    }
+    .normalLink,
+    .importantLink {
+      padding: 12px 24px;
+    }
+    .normalLink:hover,
+    .importantLink:hover {
+      cursor: pointer;
+      opacity: 60%;
+    }
+    .normalLink {
+      background-color: coral;
+    }
+    .importantLink {
+      background-color: gold;
+    }
+    nav {
+      display: flex;
+    }
+    nav .normalLink,
+    nav .importantLink {
+      flex-grow: 1;
+      text-align: center;
+    }
+    main {
+      padding: 12px 48px;
+    }
+    footer {
+      background-color: lavender;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    footer p {
+      flex-basis: 100%;
+      text-align: center;
+    }
+    footer .importantLink {
+      flex-grow: 2;
+      text-align: center;
+    }
+    @media screen and (min-width: 480px) and (max-width: 799px)
+    header {
+      font-size: 18px;
+    }
+    header,
+    main {
+      padding: 4px 36px;
+    }
+    nav {
+      flex-wrap: wrap;
+    }
+    nav .importantLink {
+      flex-basis: 100%;
+      padding: 16px;
+    }
+    nav .normalLink {
+      flex-basis: 33.33%
+      padding: 20px;
+    }
+    footer p {
+      order: 2;
+    }
+    footer .importantLink {
+      order: 1;
+      padding: 36px;
+    }
+     @media screen and (max-width: 479px) {
+       header {
+         font-size: 14px;
+       }
+       header,
+       main {
+         padding: 4px 24px;
+       }
+       nav,
+       footer {
+         flex-direction: column;
+       }
+       footer .importantLink {
+         order: 1;
+       }
+       footer .importantLink: last-child {
+         order: 3;
+       }
+       footer p {
+         order: 2;
+       }
+     }
+ </style>
+ </head>
+  <body>
+    <header>
+      <h1>Responsive Flexbox Example</h1>
+      </header>
+      <nav>
+        <div class="importantLink">Important Link 1</div>
+        <div class="normalLink">Link 1</div>
+        <div class="normalLink">Link 2</div>
+        <div class="normalLink">Link 3</div>
+        <div class="importantLink">Important Link 2</div>
+      </nav>
+      <main>
+        <P>
+          A quo minim vidisse, iudicem ipsum ne doctrina coniunctione,
+          o irure illum ne doctrina qui o an minim anim enim. Labore
+          de voluptate nam dolore id singulis. Quem mandaremus
+          philosophari eu iudicem sint expetendis offendit o laboris
+          eu cupidatat iis do velit fugiat amet nescius, legam nostrud
+          in tamen quis te mandaremus te sint, mandaremus elit commodo
+          hic minim possumus imitarentur. Probant amet aut cupidatat
+          arbitrantur, et malis ea anim.E dolore admodum laborum, amet
+          officia e sunt multos sed anim qui cupidatat hic eiusmod e
+          ingeniis. Admodum elit export et dolore. Sunt ne singulis ea
+          anim, ubi non despicationes, offendit fidelissimae eu
+          proident, quibusdam culpa laborum singulis. Ea anim senserit
+          graviterque, est hic dolor incididunt.
+        </P>
+      </main>
+      <footer>
+        <P>Thanks for stopping by. Hope this  helped!</P>
+        <div class="importantLink">Other Important Link 1</div>
+        <div class="importantLink">Other Important Link 2</div>
+      </footer>
+  </body>
+</html>
