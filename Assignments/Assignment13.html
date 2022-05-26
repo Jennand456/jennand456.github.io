@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Jennifer Grid Example</title>
+    <style>
+      .myGrid {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+        "header header header header header"
+        "sidenav sidenav content content content"  
+        "sidenav sidenav footer footer footer";
+      }
+      header {
+        background-color: pink;
+        padding: 36px;
+        grid-area: header;
+      }
+      nav {
+        background-color: lightgreen;
+        padding: 25px;
+        grid-area: sidenav;
+      }
+      main {
+        padding: 10px;
+        grid-area: content;
+      }
+      footer {
+        background-color: pink;
+        padding: 10px;
+        grid-area: footer;
+      }
+    </style>
+ </head>
+  <body>
+    <div class="myGrid">
+
+      <header>
+        <h1>Jennifers Grid</h1>
+      </header>
+        <nav>
+          <div>Home</div>
+          <div>Gallery</div>
+          <div>About Me</div>
+          <div>Contact</div>
+     </nav>
+     <main>
+       <P>
+         Ubi elit constias ullamco a sint quamquam adipisicing ita
+         nescius quae officia a aliqua consequat id possumus. Ne enim
+         quibusdam efflorescere ea ex consequat praetermissum,
+         laborum veniam officia, velit ne cupidatat qui sint. Minim
+         se arbitror, legam pariatur e constias aut quid fabulas iis
+         elit fore, export laborum nam imitarentur. Et quorum quem a
+         nostrud de ea quis cillum aute consequat.Ipsum doctrina
+         exquisitaque, enim illustriora admodum veniam constias,
+         cupidatat est magna expetendis a cillum pariatur
+         imitarentur, ubi de nisi offendit, occaecat coniunctione a
+         litteris, offendit malis senserit, probant quis quae hic
+         culpa. Summis proident mandaremus, iis et sint amet cillum.
+         Consequat ipsum esse do quorum qui fore incididunt e
+         tractavissent.
+       </P>
+     </main>
+     <footer>
+       This is a footer
+     </footer>
+   </div>
+  </body>
+</html>
