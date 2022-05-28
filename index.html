@@ -3,38 +3,66 @@
   <head>
     <title>A3Z CREATIONS</title>
     <style>
-   nav ul {
-    background-color:aquamarine;
-     list-style-type: none;
-     margin: 0px;
-     padding: 8px;
-     text-align: center;
-    }
-     nav ul li {
-       background-color: aquamarine;
-       display: inline-block;
-       margin: 0px 24px;
-       padding: 12px 8px;
-     }
-     nav ul li a {
-       color: navy
-       diplay: inline-block;
-       text-Decoration: none;
-     }
-     nav ul li:hover {
-       background-color: navy;
-    }
-     nav ul li:hover a {
-      color: white;
-     }
-    </style>
-     <body>
+    .myGrid {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-auto-rows: minmax(50px, auto);
+    grid-template-areas:
+    "header header header header header"
+    "sidenav sidenav content  content content"
+    "sidenav sidenav footer footer footer";
+  }
+  header {
+    background-color: aquamarine;
+    padding: 36px;
+    grid-area: header;
+  }
+  nav {
+    background-color: lightgray;
+    padding: 25px;
+    grid-area: sidenav;
+  }
+  nav :hover {
+    background-color: navy;
+    color: white;
+  }
+  main {
+    padding: 10px;
+    grid-area: content;
+  }
+  footer {
+    background-color: aquamarine;
+    padding: 10px;
+    grid-area: footer;
+  }
+  img {
+    height: 400px;
+  }
+  </style>
+</head>
+<body>
+<div class="myGrid">
+
+  <header>
+    <h1>A3Z CREATIONS</h1>
+  </header>
     <nav>
-     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="aboutme.html">About Me</a></li>
-     </ul>
-   </nav>
+      <div>Home</div>
+      <div>Gallery</div>
+      <div>About Me</div>
+      <div>Contact</div>
+    </nav>
+   <main>
+    <P>
+      Let us create for you.
+    </P>
+    <P>
+    <img src="Images/birds.jpg" alt="birds"></img>
+    </P>
+   </main>
+    <footer>
+    Pretty Birds.
+    </footer>
+   </div>
   </body>
 </html>

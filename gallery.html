@@ -3,40 +3,58 @@
   <head>
     <title>Gallery</title>
     <style>
-    nav ul {
-      background-color: pink;
-     list-style-type: none;
-     margin: 4px;
-     padding: 8px;
-     text-align: center;
+    .myGrid {
+      display: grid;
+      grid-template-columns: repeat(5,1fr);
+      grid-auto-rows: minmax(50px, auto);
+      grid-template-areas:
+      "header header header header header"
+      "sidenav sidenav content content content"
+      "sidenav sidenav footer footer footer";
     }
-    nav ul li {
-      background-color: pink;
-      display: inline-block;
-      margin: 12px 24px;
-      padding: 12px 8px;
+    header {
+      background-color: aquamarine;
+      padding: 36px;
+      grid-area: header;
+      text-align: center;
     }
-    nav ul li a {
-      color: navy;
-      display: inline-block;
-      text-decoration: none;
+    nav {
+      background-color: lightgray;
+      padding: 25px;
+      grid-area: sidenav;
     }
-    nav ul li:hover {
+    nav :hover {
       background-color: navy;
+      color: white;
     }
-    nav ul li:hover a {
-    color: white;
+    main {
+      padding: 10px;
+      grid-area: content;
     }
-    </style>
-  </head>
-  <body>
-    <h1>Gallery</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
-      </ul>
-    </nav>
-  </body>
+    footer {
+      background-color: aquamarine;
+      padding: 10px;
+      grid-area: footer;
+    }
+  </style>
+</head>
+<body>
+  <div class="myGrid">
+    <header>
+      <h1>Gallery</h1>
+    </header>
+      <nav>
+        <div>Home</div>
+        <div>Gallery</div>
+        <div>About Me</div>
+        <div>Contact</div>
+     </nav>
+    <main>
+   </main>
+   <footer>
+     This is a footer.
+   </footer>
+   </head>
+   <body>
+   </body>
   </html>
