@@ -14,24 +14,52 @@
     }
     header {
       background-color: aquamarine;
-      padding: 36px;
+      text-align: center;
+      padding: 24px;
       grid-area: header;
+    }
+    header img {
+      border: 12px solid aquqmarine;
+      align: center;
+      border-radius: 50%;
+      height: 200px;
     }
     nav {
       background-color: lightgray;
-      padding: 25px;
+      padding: 0px;
+      margin: 2px;
       grid-area: sidenav;
     }
-    nav :hover {
+    nav ul {
+      background-color: lightgray;
+      list-style-type: none;
+      padding: 48px;
+      margin: 0px;
+      grid-area: sidenav;
+    }
+    nav ul li {
+      background-color: lightgray;
+      padding: 24px
+      display: inline-block;
+      grid-area: sidenav;
+    }
+    nav ul li a {
+      color: navy;
+      display: inline-block;
+      text-decoration: none;
+      grid-area: sidenav;
+    }
+    nav ul li :hover {
       background-color: navy;
       color: white;
+
     }
     main {
       padding: 10px;
       grid-area: content;
     }
     footer {
-      background-color: pink;
+      background-color: aquamarine;
       padding: 10px;
       grid-area: footer;
     }
@@ -39,42 +67,30 @@
 </head>
 <body>
   <div class="myGrid">
-
     <header>
+        <img src="Images/J1.jpg" alt="J1"></img>
       <h1>About Me</h1>
     </header>
       <nav>
-        <div>Home</div>
-        <div>Gallery</div>
-        <div>About Me</div>
-        <div>Contact</div>
-   </nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
    <main>
+     <P>
+       I'm currently as School Nurse. I've been a Nurse for over 31 years.
+       I have worked with various age groups, for the last 10 years I have
+       been working with Babies, and children. My passion and hearts desire,
+       has always been to have my own Designing Company. Designing children
+       Clothing which includes Babies.
+     </P>
    </main>
-   <footer>
-     This is a footer
-   </footer>
- </div>
-</body>
-</html>
-
-
-    </style>
-  </head>
-  <body>
-
-    <header>
-      <img src="Images/J1.jpg" alt="J1"></img>
-      <h1>About Me</h1>
-    </header>
-    <section>
-        <P>
-          I'm currently as School Nurse. I've been a Nurse for over 31 years.
-          I have worked with various age groups, for the last 10 years I have
-          been working with Babies, and children. My passion and hearts desire,
-          has always been to have my own Designing Company. Designing children
-          Clothing which includes Babies.
-        </P>
-    </section>
+    <footer>
+      This is a footer
+    </footer>
+  </div>
     </body>
 </html>

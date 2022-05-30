@@ -10,7 +10,8 @@
       grid-template-areas:
       "header header header header header"
       "sidenav sidenav content content content"
-      "sidenav sidenav footer footer footer";
+       "sidenav sidenav footer footer footer"
+
     }
     header {
       background-color: aquamarine;
@@ -21,11 +22,29 @@
     nav {
       background-color: lightgray;
       padding: 25px;
+      margin: 0px;
       grid-area: sidenav;
     }
-    nav :hover {
+    nav ul {
+      background-color: lightgray;
+      list-style-type: none;
+      padding: 48px;
+      margin: 0px;
+      grid-area: sidenav;
+    }
+    nav ul li {
+      background-color: lightgray;
+      display: inline-block;
+      grid-area: sidenav;
+    }
+    nav ul li a{
+      color: navy;
+      text-decoration: none;
+    }
+    nav ul li :hover {
       background-color: navy;
       color: white;
+      grid-area: sidenav;
     }
     main {
       padding: 10px;
@@ -44,17 +63,18 @@
       <h1>Gallery</h1>
     </header>
       <nav>
-        <div>Home</div>
-        <div>Gallery</div>
-        <div>About Me</div>
-        <div>Contact</div>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="aboutme.html">About Me</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
      </nav>
     <main>
    </main>
    <footer>
      This is a footer.
    </footer>
-   </head>
-   <body>
-   </body>
-  </html>
+ </div>
+</body>
+</html>

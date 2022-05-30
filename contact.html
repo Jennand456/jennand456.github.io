@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Contact</title>
+    <style>
+      .myGrid {
+        display: grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+        "header header header header header"
+        "sidenav sidenav content content content"
+         "sidenav sidenav footer footer footer";
+      }
+      header {
+        background-color: aquamarine;
+        padding: 36px;
+        grid-area: header;
+        text-align: center;
+      }
+      nav {
+        background-color: lightgray;
+        padding: 25px;
+        margin: 0px;
+        grid-area: sidenav;
+      }
+      nav ul {
+        background-color: lightgray;
+        list-style-type: none;
+        padding: 48px;
+        margin: 2px;
+        grid-area: sidenav;
+      }
+      nav ul li {
+        background-color: lightgray;
+        display: inline-block; 
+        grid-area: sidenav;
+      }
+      nav ul li a {
+        color: navy;
+        text-decoration: none;
+      }
+      nav ul li :hover {
+        background-color: navy;
+        color: white;
+        grid-area: sidenav;
+      }
+      main {
+        padding: 10px;
+        grid-area: content;
+      }
+      footer {
+        background-color: aquamarine;
+        padding: 10px;
+        grid-area: footer;
+      }
+    </style>
+ </head>
+  <body>
+    <div class="myGrid">
+      <header>
+        <h1>Contact</h1>
+      </header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+       </nav>
+      <main>
+     </main>
+     <footer>
+       This is a footer.
+     </footer>
+     </div>
+  </body>
+</html>

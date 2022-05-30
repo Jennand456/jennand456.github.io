@@ -9,7 +9,7 @@
     grid-auto-rows: minmax(50px, auto);
     grid-template-areas:
     "header header header header header"
-    "sidenav sidenav content  content content"
+    "sidenav sidenav content content content"
     "sidenav sidenav footer footer footer";
   }
   header {
@@ -17,25 +17,35 @@
     padding: 36px;
     grid-area: header;
   }
-  nav  {
+  nav {
     background-color: lightgray;
     padding: 12px;
     margin: 24px;
     grid-area: sidenav;
   }
-  nav ul li {
-    display: inline-block;
-    padding: 24px 24px;
+  nav ul  {
+    background-color: lightgray;
+    list-style-type: none;
+    padding: 25px;
     grid-area: sidenav;
   }
-  nav  :hover {
+  nav ul li {
+    background-color: lightgray;
+    display: inline-block;
+    grid-area: sidenav;
+  }
+  nav ul li a {
+    color: navy;
+    display: inline-block;
+    text-decoration: none;
+  }
+  nav ul li :hover  {
     background-color:  navy;
     color: white;
+    grid-area: sidenav;
   }
-
-
   main {
-    padding: 10px;
+    padding: 20px;
     grid-area: content;
   }
   footer {
@@ -44,21 +54,22 @@
     grid-area: footer;
   }
   img {
-    height: 400px;
+    height: 500px;
   }
   </style>
 </head>
 <body>
 <div class="myGrid">
-
   <header>
     <h1>A3Z CREATIONS</h1>
   </header>
     <nav>
-      <div>Home</div>
-      <div>Gallery</div>
-      <div>About Me</div>
-      <div>Contact</div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
    <main>
     <P>
