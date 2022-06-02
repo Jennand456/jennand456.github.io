@@ -17,7 +17,14 @@
       background-color: aquamarine;
       padding: 36px;
       grid-area: header;
+    }
+    header h1 {
       text-align: center;
+    }
+    header img {
+      border: 10px solid aquamarine;
+      border-radius: 100%;
+      height: 100px;
     }
     nav {
       background-color: lightgray;
@@ -53,13 +60,14 @@
       grid-area: footer;
     }
     img {
-      height: 250px;
+      height: 200px;
     }
   </style>
 </head>
 <body>
   <div class="myGrid">
     <header>
+      <img src="Images/Logo.png" alt="Logo"></img>
       <h1>Gallery</h1>
     </header>
       <nav>
@@ -71,6 +79,10 @@
         </ul>
      </nav>
     <main>
+        <img src="Images/RedDress.jpg" alt="RedDress"></img>
+        <img src="Images/jumpsuite2.jpg" alt="jumpsuite"></img>
+        <img src="Images/green dress front.jpg" alt="greendress"></img>
+        <img src="Images/boybluepants.jpg" alt="boyblue"></img>
    </main>
    <footer>
      This is a footer.
