@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>Grid Area (Responsive)</title>
+    <style>
+      .myGrid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-auto-rows: minmax(50px, auto);
+        grid-template-areas:
+        "myHeader myHeader myHeader"
+        "sidenav  content  content";
+      }
+      header {
+        background-color: lightgreen;
+        padding: 36px;
+        grid-area: myHeader;
+      }
+      nav {
+        background-color: #DDFFDD;
+        padding: 36px;
+        grid-area: sidenav;
+      }
+      main {
+        padding: 36px;
+        grid-area: content;
+      }
+      @media screen and (max-width: 480px) {
+        .myGrid {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+          "myHeader"
+          "sidenav"
+          "content";
+      }
+      header,
+      nav,
+      main {
+        padding: 18px;
+      }
+      header,
+      nav {
+        text-align: center;
+      }
+      header h1 {
+        font-size: 24px;
+        margin: 0px;
+      }
+    }
+    </style>
+ </head>
+  <body>
+    <div class="myGrid">
+       <header>
+        <h1>Grid Areas Responsive Demo</h1>
+      </header>
+      <nav>NAVIGATION GOES HERE</nav>
+      <main>
+        <P>
+          Pariatur magna ab doctrina cohaerescant, et malis amet ipsum
+          cupidatat ut fabulas hic fabulas, aliqua possumus cupidatat
+          eu ex quorum culpa amet mandaremus, nescius ubi incurreret
+          ea excepteur id laboris ab de culpa te elit. Aliqua
+          quibusdam in excepteur ab ita est cillum nostrud, ad te
+          fidelissimae, quem ex ut elit laborum. Sed o exercitation,
+          do ex praetermissum, de irure quibusdam philosophari, ut sed
+          relinqueret, de aliqua est amet te hic iudicem
+          praetermissum, non enim se tamen in in ubi philosophari. O
+          ubi labore occaecat sed aute nam excepteur quo quorum non
+          dolor nescius est ipsum dolore ubi noster offendit o
+          eiusmod.Iis culpa exquisitaque, senserit hic duis laborum,
+          sed esse fugiat ex singulis o enim excepteur expetendis.
+          Arbitror malis expetendis. Excepteur coniunctione se
+          constias, te veniam constias singulis ne vidisse est labore
+          mandaremus, aliquip ita ingeniis do ad dolore proident,
+          senserit ad aute proident, quamquam e aute, ingeniis sed
+          elit.
+        </P>
+        <P>
+          Ita hic quid sunt sint, dolore reprehenderit laboris magna
+          incididunt si te proident familiaritatem, e quibusdam hic
+          offendit. Ea se fore summis nulla aut ut si praesentibus e
+          ad aliqua magna ad probant, cernantur ubi cupidatat.
+          Consequat elit deserunt de o malis velit ad litteris ita
+          incididunt velit fugiat occaecat fore, quis aliquip se
+          offendit, eu export noster qui probant te quem possumus de
+          adipisicing o summis expetendis reprehenderit, culpa nescius
+          commodo. Sed elit incurreret mentitum quo sunt cernantur
+          adipisicing.Hic de export incurreret si an duis
+          reprehenderit. O anim voluptate. Senserit de malis singulis,
+          ne eram veniam ubi mandaremus ita iudicem in labore, export
+          comprehenderit quamquam magna consequat, duis ut quibusdam
+          te illum, in legam nulla do singulis te nam minim minim
+          magna commodo, est aute culpa elit doctrina. Est fugiat
+          voluptate iudicem, ex sed noster aliquip.
+        </P>
+      </main>
+  </div>
+  </body>
+</html>
