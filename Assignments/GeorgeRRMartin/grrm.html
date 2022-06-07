@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <style>
     body {
-      background-image: url();
+      background-image: url("../../Images/granite2.jpg");
       background-size: cover;
     }
      #gridLayout {
@@ -59,11 +59,23 @@
      #bannerContainer {
        grid-area: banner;
      }
+     #bannerContainer img {
+       width: 100%;
+     }
      #cardsContainer {
        grid-area: cards;
+       dispaly: flex;
+     }
+     #cardsContainer img {
+       flex-grow: 1;
      }
      aside {
        grid-area: aside;
+       #moreAppearancesContainer {
+         background-image: url("../../Images/artist-bg.jpg");
+         background-position: right bottom;
+         background-repeat: no-repeat;
+       }
      }
      main {
        grid-area: blog;
@@ -97,6 +109,13 @@
          flex-direction: column;
          align-items: center;
        }
+       #cardsContainer {
+         flex-direction: column;
+       }
+       #cardsContainer img {
+          flex-grow: 0;
+          width: 100%
+       }
      }
     </style>
  </head>
@@ -117,9 +136,28 @@
          <li><a href="#">MERCHANDISE</a></li>
         </ul>
       </nav>
-      <section id="bannerContainer">BANNER</section>
-      <section id="cardsContainer">CARDS</section>
-      <aside>ASIDE</aside>
+      <section id="bannerContainer">
+        <img src="../../Images/FandB-banner.jpg" alt="fire and
+         blood book">
+        </section>
+      <section id="cardsContainer">
+        <img src="../../Images/GRRM-SMALL-cocteau3.jpg"
+        alt="the jean cocteau cinema">
+        <img src="../../Images/newsletter-home.png"
+        alt="george r r martin newsletter">
+        <img src="../../Images/callout-sample-3.jpg"
+        alt="darksword minatures">
+      </section>
+      <aside>
+       <div id="moreAppearancesContainer">
+         <h3>NEXT APPEARANCE</h3>
+         <P class="yellow">August 26-28th, 2022</P>
+         <P><span class="underline">Bubonicon 53</span>
+          <span class="white">Guest</span></P>
+         <img src="../../Images/more-appearances.jpg" alt="more
+         appearances">
+        </div>
+      </aside>
       <main>BLOGPOSTS</main>
       <footer>FOOTER</footer>
       <div id="bottom">BOTTOM</div>
