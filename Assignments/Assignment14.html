@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+     <title>Assignment 14</title>
+     <style>
+     .textInput label {
+      display: block;
+     }
+     .textInput input {
+       margin: 4px 0px 12px 0px;
+       padding: 8px;
+       width: 200px;
+     }
+     .textInput input:focus-visible {
+       background-color: magenta;
+     }
+     textarea {
+       font-family: sans-serif;
+       margin-top: 4px;
+       padding: 8px;
+       width: 400px;
+       height: 100px;
+     }
+     input[type=time] {
+       margin-left: 16px;
+     }
+     #buttonContainer input[type=submit] {
+       border: 0px;
+       border-radius: 8px;
+       margin-right: 12px;
+       padding: 12px 48px;
+       cursor: pointer;
+       background-color: magenta;
+     }
+     </style>
+ </head>
+   <body>
+    <h1>HOBBIES</h1>
+    <form action="submission_action.php">
+      <fieldset>
+       <legend>Form Fields</legend>
+       <P>What is your name?</P>
+      <div id="firstNameContainer" class="textInput">
+        <label for="firstNameId">First Name:</label>
+        <input type="text" id="firstNameId" name="firstName">
+        </div>
+        <div id="middleNameContainer" class="textInput">
+          <label for="middleNameId">Middle Name:</label>
+          <input type="text" id="middleNameId" name="middleName">
+        </div>
+        <div id="lastNameContainer" class="textInput">
+          <label for="lastNameId">Last Name:</label>
+          <input type="text" id="lastNameId" name="lastName">
+        </div>
+
+          <h2>Check all that apply</h2>
+          <P>What do you like to do? What are your Hobbies?</P>
+         <div>
+           <input type="checkbox" id="sewingcheckbox"  name="hobbieOption1"
+           value="sewing">
+          <label for="sewingcheckbox">Sewing</label>
+        </div>
+        <div>
+          <input type="checkbox" id="readingcheckbox"  name="hobbieOption2"
+           value="reading">
+         <label for="readingcheckbox">Reading</label>
+        </div>
+        <div>
+          <input type="checkbox" id="gardeningcheckbox"  name="hobbieOption3"
+           value="gardening">
+         <label for="gardeningcheckbox">Gardening</label>
+       </div>
+       <div>
+         <input type="checkbox" id="sportscheckbox"  name="hobbieOption4"
+          value="sports">
+        <label for="sportscheckbox">Sports</label>
+      </div>
+
+       <P>What time of the day do you like to do your Hobbie?</P>
+     <div>
+
+
+
+
+        
+     </div>
+
+      <div>
+        <h2>Explain</h2>
+        <label for="explainId">Why do you like this hobbie?</label>
+        <textarea id="explainId" name="explain"
+        row ="5" cols="50">Default Text</textarea>
+      </div>
+
+      <div id="buttonContainer">
+        <input type="submit" value="click to submit this form">
+      </div>
+        </div>
+      </fieldset>
+   </body>
+</html>
