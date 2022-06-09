@@ -21,7 +21,7 @@
        width: 400px;
        height: 100px;
      }
-     input[type=time] {
+     input[type=radio] {
        margin-left: 16px;
      }
      #buttonContainer input[type=submit] {
@@ -78,13 +78,33 @@
 
        <P>What time of the day do you like to do your Hobbie?</P>
      <div>
-
-
-
-
-        
+       <input type="radio" id="morningRadio" name="time"
+       value="morning">
+       <label for="morningRadio">
+         Morning
+     </label>
      </div>
-
+      <div>
+        <input type="radio" id="noonRadio" name="time"
+        value="noon">
+        <label for="noonRadio">
+          Noon
+        </label>
+      </div>
+      <div>
+        <input type="radio" id="eveningRadio" name="time"
+        value="evening">
+        <label for="eveningRadio">
+          Evening
+       </label>
+      </div>
+       <div>
+         <input type="radio" id="nightRadio" name="time"
+         value="night">
+         <label for="nightRadio">
+           Night
+         </label>
+       </div>
       <div>
         <h2>Explain</h2>
         <label for="explainId">Why do you like this hobbie?</label>
