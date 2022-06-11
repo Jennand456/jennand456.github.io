@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
     <style>
     body {
-      background-image: url("../../Images/granite2.jpg");
+      background-image: url("../../Images/granite2.jpg")
       background-size: cover;
     }
      #gridLayout {
@@ -35,10 +35,31 @@
      }
      header {
        grid-area: header;
+       display: flex;
+       align-items: center;
+       justify-content: space-around;
      }
      header h1 {
        display: inline-block;
        font-family: 'Montaga', serif;
+       font-size: 60px;
+     }
+     #socialSection {
+       text-align: right;
+     }
+     #sheildImage:hover {
+       animation: spin 1s infinite;
+     }
+     @keyframes spin {
+       0% {
+         transform: scaleX(1);
+       }
+       50% {
+         transform: scaleX(-1);
+       }
+       100% {
+         transform: scale(1);
+       }
      }
      nav {
        grid-area: navbar;
@@ -68,6 +89,7 @@
      }
      #cardsContainer img {
        flex-grow: 1;
+       border-left: 5px solid gray;
      }
      aside {
        grid-area: aside;
@@ -93,11 +115,63 @@
     .white {
       color: white;
     }
-   main {
+    #viewPublicationContainer {
+      background-image: url("../../Images/releases-bg.jpg");
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      text-align: left;
+      color: #FFF;
+      padding: 20px 10px;
+      border-top: 5px solid gray;
+      border-bottom: 5px solid gray;
+    }
+    #viewPublicationContainer h3 {
+      font-family: 'Montaga', serif;
+      color: white;
+    }
+    .blue {
+      color: #92add1;
+    }
+    #viewPublicationContainer P {
+      margin: 12px;
+    }
+    #wildcards {
+      width: 70px;
+    }
+    #pubContent {
+      display: inline-block;
+    }
+    #valyriansteel {
+      width: 100%;
+      border-bottom: 5px solid gray;
+
+    }
+    #stagecoach {
+      width: 100%;
+    }
+    main {
        grid-area: blog;
+       background-color: lightgray;
+       padding: 24px;
      }
-     footer {
+    main h2 {
+       font-family: 'Montaga', serif;
+     }
+    main h3 a,
+    main p a {
+      color: #1c4268;
+    }
+    main h3 a {
+      text-decoration: none;
+    }
+    #notablog img {
+      margin: 15px 0;
+    }
+   footer {
        grid-area: footer;
+     }
+     #footerCopy {
+       text-align: center;
      }
      #bottom {
        grid-area: bottom;
@@ -117,9 +191,14 @@
        }
        header {
          text-align: center;
+         flex-direction: column;
        }
        header h1 {
          display: block;
+         font-size: 36px;
+       }
+       #socialSection {
+         text-align: center;
        }
        nav ul {
          flex-direction: column;
@@ -131,6 +210,14 @@
        #cardsContainer img {
           flex-grow: 0;
           width: 100%;
+          border-bottom: 5px solid gray;
+       }
+       #notablog img {
+         margin: 15px 0;
+       }
+
+       #footerCopy {
+         text-align: center;
        }
      }
     </style>
@@ -138,11 +225,18 @@
   <body>
     <div id="gridLayout">
       <header>
-        <img src="../../Images/shield-spin.jpg" alt="shield"></img>
-        <h1>GEORGE R. R. MARTIN</h1>
+      <img id="sheildImage" src="../../Images/shield-spin.jpg" alt="shield">
+      <h1>GEORGE R. R. MARTIN</h1>
+      <div id="socialSection">
         <img src="../../Images/facebook-overall.jpg" alt="facebook">
         <img src="../../Images/twitter-overall.jpg"  alt="twitter">
         <img src="../../Images/app-overall.jpg" alt="westeros">
+        <form>
+          <input type="text" id="searchbar" name="searchQuery"
+          placeholder="Search...">
+          <input type="submit" id="searchButton" value="SEARCH">
+        </form>
+      </div>
       </header>
       <nav>
         <ul>
@@ -175,11 +269,82 @@
           <span class="white">Guest</span></P>
          <img src="../../Images/more-appearances.jpg" alt="more
          appearances">
-        </div
+       </div>
+       <div id="viewPublicationContainer">
+         <h3>NEXT PUBLICATION</h3>
+         <img id="wildcards" src="../../Images/wildcards2022001_cvr-scaled.jpg"
+         alt="wildcards">
+         <div id="pubContent">
+           <P class="blue">June 15, 2022</P>
+           <P>WILD CARDS Marvel</P>
+           <P>Comic Book 1</P>
+           <P>(Comic Monthly)</P>
+         </div>
+         <img src="../../Images/view-pubs.png" alt="viewpublications">
+       </div>
+       <div>
+         <img id="valyriansteel" src="../../Images/valyrian-steel-v3.jpg"
+         alt="valyriansteel">
+       </div>
+       <div>
+      <img id="stagecoach" src="../../Images/stagecoach-v2.jpg" alt="stagecoach">
+       </div>
       </aside>
-      <main>BLOGPOSTS</main>
-      <footer>FOOTER</footer>
-      <div id="bottom">BOTTOM</div>
+      <main>
+        <h2>CURRENT GRRM BLOG POSTS</h2>
+        <h3><a href="#">Six Days to Joe</a></h3>
+        <P>
+         Six days to go. Six days to Joe. Leaphorn, that is. It is June 6 as I type
+         this.  Next weekend, JUNE 12, will see the debut of DARK WINDS on AMC  and
+         AMC+. Yes, it has “Winds” in the… <a href="#">Read more >></a>
+        </P>
+        <h3><a href="#">Stonemaiden I Back</a></h3>
+        <P>
+        There’s a brand new treat for Wild Cards fans over at
+         Tor.com. “Hearts of Stone” is a terrific new novelette
+         from Emma Newman.   It marks the return of Stonemaiden,
+         the Cornish ace first introduced in KNAVES OVER QUEENS.
+         That was…… <a href="#">Read more >></a>
+        </P>
+        <h3><a href="#">Here Come The Dragons</a></h3>
+        <P>
+         Are those dragons I see? Yes indeed. It’s May, which means
+         the August 21 premiere of HOUSE OF THE DRAGON is only a few
+         months away. And HBO has just released a new trailer, to give
+         you another taste of… <a href="#">Read more >></a>
+        </P>
+        <h3><a href="#">The Winds of June</a></h3>
+        <P>
+         The Dark Winds will start blowing in June.   June 12, to be
+         precise. That’s the day that DARK WINDS, a new series based on
+         the classic bestselling Navajo detective novels by Tony Hillerman,
+          will premiere on AMC and AMC+.   I… <a href="#">Read more >></a>
+        </P>
+        <h3><a href="#">The Dragons Are Coming..</a></h3>
+        <P>
+         A… they’re on the wing, and will be arriving in August. Details here:
+         https://variety.com/2022/tv/news/game-of-thrones-house-of-the-dragon-
+         premiere-date-1235215983/ <a href="#">Read more >></a>
+        </P>
+        <h3><a href="#">THE RISE OF THE DRAGON</a></h3>
+        <P>
+        We’re so excited to announce The Rise of The Dragon, a lavish visual
+        history of House Targaryen – the iconic family at the heart of HBO’s
+        Game of Thrones prequel series, House of the Dragon – featuring over
+        180 all-new… <a href="#">Read more >></a>
+        </P>
+        <h3><a href="#">Dealers Take Two</a></h3>
+        <P>
+        Kings and deuces may not be as iconic… or ominous… a poker hand as
+        aces and eights, but it’s not a bad hand to be dealt… and Tor will be
+        dealing those cards to all the Wild Cards fans out…<a href="#">Read more >></a>
+        </P>
+        <img id="notablog" src="../../Images/not-a-blog.png" alt="notablog">
+      </main>
+      <footer id="footerCopy" >© 2022 GEORGE R.R. MARTIN. ALL RIGHTS RESERVED.</footer>
+      <div>
+
+      </div>
     </div>
   </body>
 </html>
