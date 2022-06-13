@@ -47,6 +47,14 @@
      #socialSection {
        text-align: right;
      }
+     #socialSection input[type=submit] {
+       border: 0;
+       border-radius: 10px;
+       margin-right: 14px;
+       padding: 4px 4px;
+       cursor: pointer;
+       background-color: #dbbf73;
+     }
      #sheildImage:hover {
        animation: spin 1s infinite;
      }
@@ -200,6 +208,16 @@
        #socialSection {
          text-align: center;
        }
+       #socialSection input[type=submit] {
+         border: 0;
+         border-radius: 10px;
+         margin-right: 14px;
+         padding: 4px 4px;
+         cursor: pointer;
+         background-color: #dbbf73;
+       }
+
+       }
        nav ul {
          flex-direction: column;
          align-items: center;
@@ -218,6 +236,9 @@
 
        #footerCopy {
          text-align: center;
+       }
+       #bottom img {
+         width: 100%;
        }
      }
     </style>
@@ -342,9 +363,9 @@
         <img id="notablog" src="../../Images/not-a-blog.png" alt="notablog">
       </main>
       <footer id="footerCopy" >© 2022 GEORGE R.R. MARTIN. ALL RIGHTS RESERVED.</footer>
-      <div>
-
+      <div id="bottom">
+        <img src="../../Images/footer-bg.jpg" alt="footer-bg">
       </div>
-    </div>
-  </body>
+      </div>
+    </body>
 </html>
