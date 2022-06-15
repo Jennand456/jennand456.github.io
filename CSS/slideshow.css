@@ -1,0 +1,12 @@
+#slideshow {
+  height: 400px;
+  text-align: center;
+}
+
+.slideshowImage {
+  width: 300px;
+}
+
+body {
+  text-align: center;
+}

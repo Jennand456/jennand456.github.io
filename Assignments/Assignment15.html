@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <title>COUNT DOWN TO WHAT?</title>
+    <style>
+      body {
+        margin: 0px;
+      }
+     #Jennifer {
+       display: flex;
+       Justify-content: center;
+       align-items: center;
+       background-image: url("../Images/Blue.jpg");
+       height: 600px;
+      }
+   #countdown {
+     display: inline-block;
+      text-align: center;
+      }
+    #Logo img {
+      width: 200px;
+      border-radius: 50%;
+      }
+      #Logo {
+      align-self: flex-start;
+      }
+      #Birthday {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+  </head>
+    <body>
+       <h1 id="Birthday">BIRTHDAY MONTH</h1>
+      <div id="Jennifer">
+        <div id="Logo"><img src="../Images/Logo.png" alt="logo"></img>
+        </div>
+        <h2 id="countdown">COUNT DOWN TO GRADUATION</h2>
+    </div>
+    <script type="text/javascript">
+      let deadline = new Date('January 1 2023 12:00');
+      let countdown = document.getElementById("countdown");
+      countdown.innnerHTML = "";
+
+      function setCountdown() {
+        let now = new Date();
+        let timeLeft = deadline.getTime() - now.getTime();
+
+        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
+          (timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        let minutes = Math.floor(
+        (timeLeft % (1000 * 60 * 60)) / (1000 * 60)
+       );
+       let seconds = Math.floor(
+       (timeLeft % (1000 * 60)) / 1000
+       );
+       countdown.innerHTML =
+       `${days} days ${hours} hours ` +
+       ` ${minutes} minutes left ${seconds} seconds left`
+      }
+
+      setInterval(setCountdown, 1000);
+    </script>
+    </body>
+  </html>
