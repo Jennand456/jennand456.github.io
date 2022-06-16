@@ -94,6 +94,7 @@
      #cardsContainer {
        grid-area: cards;
        display: flex;
+       flex-direction: rows;
      }
      #cardsContainer img {
        flex-grow: 1;
@@ -186,7 +187,7 @@
      }
      @media screen and (max-width: 1000px) {
        #gridLayout {
-         grid-template-columns: 1fr;
+         grid-template-column: 1fr;
          grid-template-areas:
           "header"
           "navbar"
@@ -199,7 +200,7 @@
        }
        header {
          text-align: center;
-         flex-direction: column;
+         flex-direction: columns;
        }
        header h1 {
          display: block;
@@ -219,11 +220,11 @@
 
        }
        nav ul {
-         flex-direction: column;
+         flex-direction: rows;
          align-items: center;
        }
        #cardsContainer {
-         flex-direction: ro;
+         flex-direction: row;
        }
        #cardsContainer img {
           flex-grow: 0;

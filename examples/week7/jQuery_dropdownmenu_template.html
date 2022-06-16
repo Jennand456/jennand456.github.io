@@ -2,6 +2,7 @@
 <html lang="en-US">
   <head>
     <title>jQuery - Dropdown Menu</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
     <style>
       * {
         box-sizing: border-box;
@@ -35,10 +36,14 @@
         background-color: lightblue;
         position: absolute;
         width: 100%;
+        display: none;
       }
       .dropdown div {
         cursor: pointer;
         margin-bottom: 12px;
+      }
+      .navLink.dropdownOpen .dropdown {
+        display: block;
       }
     </style>
   </head>
@@ -82,5 +87,25 @@
         <div class="mainLink">Another Link</div>
       </div>
     </nav>
+    <script type="text/javascript">
+    $(".hoverDropdown").hover(
+      function() {
+        $(this).addClass("dropdownOpen");
+      },
+      function() {
+        $(this).removeClass("dropdownOpen");
+      }
+    );
+
+    $(".clickDropdown").click(
+      function() {
+        if ($(this).hasClass("dropdownOpen")) {
+          $(this).removeClass("dropdownOpen");
+        } else {
+          $(this).addClass("dropdownOpen");
+      }
+    }
+    );
+   </script>
   </body>
 </html>
