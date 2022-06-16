@@ -8,6 +8,14 @@ let slides = [slide1, slide2, slide3, slide4];
 let currentSlideIndex = 0;
 
 function showCurrentSlide() {
+  debugger;
+   if ( currentSlideIndex < 0) {
+     currentSlideIndex = slides.length - 1;
+   }
+
+   if (currentSlideIndex >= slides.length) {
+     currentSlideIndex = 0;
+   }
   for (let i = 0; i < slides.length; i++) {
     let loopSlide = slides[i];
     if (i != currentSlideIndex) {
@@ -22,7 +30,7 @@ showCurrentSlide();
 
 function showNextSlide() {
   currentSlideIndex++;
-  showNextSlide();
+  showCurrentSlide();
 }
 
 function showPreviousSlide() {
