@@ -94,7 +94,7 @@
      #cardsContainer {
        grid-area: cards;
        display: flex;
-       flex-direction: rows;
+       flex-direction: row;
      }
      #cardsContainer img {
        flex-grow: 1;
@@ -187,7 +187,7 @@
      }
      @media screen and (max-width: 1000px) {
        #gridLayout {
-         grid-template-column: 1fr;
+         grid-template-columns: 1fr;
          grid-template-areas:
           "header"
           "navbar"
@@ -200,7 +200,7 @@
        }
        header {
          text-align: center;
-         flex-direction: columns;
+         flex-direction: column;
        }
        header h1 {
          display: block;
@@ -216,15 +216,14 @@
          padding: 4px 4px;
          cursor: pointer;
          background-color: #dbbf73;
-       }
 
        }
        nav ul {
-         flex-direction: rows;
+         flex-direction: column;
          align-items: center;
        }
        #cardsContainer {
-         flex-direction: row;
+         flex-direction: column;
        }
        #cardsContainer img {
           flex-grow: 0;
