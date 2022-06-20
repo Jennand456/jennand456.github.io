@@ -2,62 +2,78 @@
 <html lang="en-US">
   <head>
     <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <style>
+       body {
+         background-color: skyblue;
+         background-size: cover;
+       }
       .myGrid {
         display: grid;
-        grid-template-columns: repeat(5,1fr);
+        grid-template-columns: 1fr repeat(3,333px) 1fr;
         grid-auto-rows: minmax(50px, auto);
         grid-template-areas:
-        "header header header header header"
-        "sidenav sidenav content content content"
-         "sidenav sidenav footer footer footer";
+        ". header  header  header ."
+        ". sidenav sidenav sidenav ."
+        ". content content content ."
+        ". footer  footer  footer .";
       }
       header {
-        background-color: aquamarine;
-        padding: 36px;
+        background-color: none;
+        padding: 20px;
         grid-area: header;
       }
       header h1 {
         text-align: center;
+        font-family: 'Handlee', serif;
+        font-size: 60px;
       }
       header img {
-      border: 10px solid aquamarine;
+      border: 10px solid skyblue;
       border-radius: 100%;
       height: 100px;
       }
       nav {
-        background-color: lightgray;
+        background-color: none;
         padding: 0px;
         margin: 2px;
         grid-area: sidenav;
       }
       nav ul {
-        background-color: lightgray;
+        background-color: none;
         list-style-type: none;
         padding: 48px;
         margin: 0px;
         grid-area: sidenav;
       }
       nav ul li {
-        background-color: lightgray;
+        background-color: none;
         padding: 4px;
       }
       nav ul li a {
-        color: navy;
+        color: #E88374;
         text-decoration: none;
+        font-family: 'Handlee', serif;
+        font-size: 20px;
       }
       nav ul li :hover {
-        background-color: navy;
+        background-color: #E88374;
         color: white;
       }
       main {
         padding: 10px;
         grid-area: content;
+        text-align: center;
+        font-family: 'Handlee', serif;
+        font-size: 20px;
       }
       footer {
-        background-color: aquamarine;
+        background-color: none;
         padding: 10px;
         grid-area: footer;
+        text-align: left;
       }
       img {
         height: 200px;
@@ -67,7 +83,7 @@
   <body>
     <div class="myGrid">
       <header>
-        <img src="Images/Logo.png" alt="logo"></img>
+      <img src="Images/Logo.png" alt="logo"></img>
         <h1>Contact</h1>
       </header>
         <nav>
@@ -79,7 +95,15 @@
           </ul>
        </nav>
       <main>
-     </main>
+        <P img src="../../Images/butterfly.avif" alt="butterfly"></P>
+        <P>Phone # 954-404-2401</P>
+        <P>E-mail a3zcreates@gmail.com</P>
+        <P>Hours of Operation</P>
+        <P>Mon.-Fri.</P>
+        <P>9am-6pm Eastern</P>
+        <P>Sat. 9am-1pm Eastern</P>
+        <P>Closed Sunday.</P>
+        <P>Message me </P>
      <footer>
        This is a footer.
      </footer>
