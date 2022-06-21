@@ -16,8 +16,7 @@
         grid-auto-rows: minmax(50px, auto);
         grid-template-areas:
         ". header  header  header ."
-        ". sidenav sidenav sidenav ."
-        ". content content content ."
+        ". sidenav content content ."
         ". footer  footer  footer .";
       }
       header {
@@ -69,6 +68,24 @@
         font-family: 'Handlee', serif;
         font-size: 20px;
       }
+      main img {
+        height: 300px;
+      }
+      textarea {
+        background-color: #E88374;
+        margin-top: 4px;
+        padding: 8px;
+        width: 200px;
+        height: 100px;
+      }
+      #buttonContainer input[type=submit] {
+        border: 0px;
+        border-radius: 8px;
+        margin-right: 12px;
+        padding: 12px 48px;
+        cursor: pointer;
+        background-color: #E88374;
+      }
       footer {
         background-color: none;
         padding: 10px;
@@ -84,7 +101,6 @@
     <div class="myGrid">
       <header>
       <img src="Images/Logo.png" alt="logo"></img>
-        <h1>Contact</h1>
       </header>
         <nav>
           <ul>
@@ -95,9 +111,8 @@
           </ul>
        </nav>
       <main>
-        <P img src="../../Images/butterfly.jpg" alt="butterfly"></P>
-        <form action="submission_action.php">
-        </form>
+        <h1>Contact</h1>
+        <img src="Images/butterfly1.jpg" alt="butterfly"></img>
         <P>Phone # 954-404-2401</P>
         <P>E-mail a3zcreates@gmail.com</P>
         <P>Hours of Operation</P>
@@ -105,10 +120,19 @@
         <P>9am-6pm Eastern</P>
         <P>Sat. 9am-1pm Eastern</P>
         <P>Closed Sunday.</P>
+        <form action="submission_action.php">
+        <div
         <P>Message me </P>
+        <label for="messagemeId"></label>
+        <textarea id="messagemeId" name="message"
+        row="5" cols="30"></textarea>
+      </div>
+        <div id="buttonContainer">
+          <input type="submit" value="click to submit">
+        </div>
      <footer>
        This is a footer.
      </footer>
-     </div>
+   </div>
   </body>
 </html>
