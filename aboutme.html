@@ -2,71 +2,129 @@
 <html lang="en-US">
   <head>
     <title>About Me</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
     <style>
+    body {
+      background-color: #64732F;
+      background-size: cover;
+    }
     .myGrid {
       display: grid;
-      grid-template-columns: repeat(5,1fr);
+      grid-template-columns: 1fr repeat(3, 333px) 1fr;
       grid-auto-rows: minmax(50px, auto);
       grid-template-areas:
-      "header header header header header"
-      "sidenav sidenav content content content"
-      "sidenav sidenav footer footer footer";
+      ". sidenav  header  header ."
+      ". sidenav content content ."
+      ". footer  footer  footer .";
     }
     header {
-      background-color: aquamarine;
+      background-color: none;
       text-align: center;
-      padding: 24px;
+      padding: 0px;
       grid-area: header;
+      font-family: 'Handlee', serif;
+      font-size: 30px;
     }
     header img {
-      border: 12px solid aquqmarine;
+      border: 12px solid #64732F;
       align: center;
       border-radius: 50%;
       height: 200px;
     }
+    #Logo {
+      width: 100px;
+      border-radius: 50%;
+      grid-area: Logo;
+    }
     nav {
-      background-color: lightgray;
+      background-color: none;
       padding: 0px;
       margin: 2px;
       grid-area: sidenav;
     }
     nav ul {
-      background-color: lightgray;
+      background-color: none;
       list-style-type: none;
       padding: 48px;
       margin: 0px;
     }
     nav ul li {
-      background-color: lightgray;
+      background-color: none;
       padding: 4px;
     }
     nav ul li a {
-      color: navy;
+      color: black;
       text-decoration: none;
+      font-family: 'Handlee', serif;
+      font-size: 20px;
     }
     nav ul li :hover {
-      background-color: navy;
-      color: white;
+      background-color: #F2F2F2;
+      color: #B54F3F;
 
     }
     main {
       padding: 10px;
       grid-area: content;
     }
+     main p {
+       font-family: 'Handlee', serif;
+       font-size: 20px;
+     }
     footer {
-      background-color: aquamarine;
+      background-color: #64732F;
       padding: 10px;
       grid-area: footer;
     }
+    @media screen and (max-width: 480px) {
+    .myGrid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "footer";
+      }
+      header,
+      nav,
+      main ,
+      footer {
+        padding: 8px;
+      }
+      header,
+      nav,
+      main {
+        padding: 18px;
+      }
+      header,
+      nav {
+        text-align: center;
+      }
+      nav ul {
+        padding: 0px;
+      }
+      header h1 {
+      font-size: 38px;
+      margin: 18px;
+      }
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
   </style>
 </head>
 <body>
   <div class="myGrid">
     <header>
-        <img src="Images/J1.jpg" alt="J1"></img>
-      <h1>About Me</h1>
+       <h1>About Me</h1>
+        <img src="Images/J1.jpg" alt="J1">
     </header>
       <nav>
+     <img id="Logo" src="Images/Logo.png" alt="Logo"></img>
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="gallery.html">Gallery</a></li>
@@ -84,7 +142,7 @@
      </P>
    </main>
     <footer>
-      This is a footer
+      create 2022.
     </footer>
   </div>
     </body>

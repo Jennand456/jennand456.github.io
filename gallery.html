@@ -16,8 +16,7 @@
       grid-auto-rows: minmax(50px, auto);
       grid-template-areas:
       ". header  header  header ."
-      ". sidenav sidenav sidenav ."
-      ". content content content ."
+      ". sidenav content content."
       ". footer  footer  footer .";
     }
     header {
@@ -55,6 +54,7 @@
       color:white;
       text-decoration: none;
       font-family: 'Handlee', serif;
+      font-size: 20px;
     }
     nav ul li :hover {
       background-color: skyblue;
@@ -62,7 +62,7 @@
     }
     main {
       grid-area: content;
-      padding: 20px;
+      padding: 30px;
     }
     footer {
       background-color: none;
@@ -71,6 +71,42 @@
     }
     img {
       height: 200px;
+    }
+    @media screen and (max-width: 480px) {
+    .myGrid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+      "header"
+      "sidenav"
+      "content"
+      "footer";
+      }
+      header,
+      nav,
+      main ,
+      footer {
+        padding: 8px;
+      }
+      header,
+      nav,
+      main {
+        padding: 18px;
+      }
+      header,
+      nav {
+        text-align: center;
+      }
+      nav ul {
+        padding: 0px;
+      }
+      header h1 {
+      font-size: 38px;
+      margin: 18px;
+      }
+      img {
+        height: auto;
+        width: 100%;
+      }
     }
   </style>
 </head>
@@ -93,6 +129,10 @@
         <img src="Images/jumpsuite2.jpg" alt="jumpsuite"></img>
         <img src="Images/green dress front.jpg" alt="greendress"></img>
         <img src="Images/boybluepants.jpg" alt="boyblue"></img>
+        <img src="Images/T-shirt.jpg" alt="T-shirt"></img>
+        <img src="Images/hellobake.jpg" alt="hello"></img>
+        <img src="Images/Print-Ad.jpg" alt="print"></img>
+        <img src="Images/Dada smoothie label(2).png" alt="dada"></img>
    </main>
    <footer>
      create 2022.

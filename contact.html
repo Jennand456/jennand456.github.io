@@ -95,6 +95,42 @@
       img {
         height: 200px;
       }
+      @media screen and (max-width: 480px) {
+      .myGrid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "header"
+        "sidenav"
+        "content"
+        "footer";
+        }
+        header,
+        nav,
+        main ,
+        footer {
+          padding: 8px;
+        }
+        header,
+        nav,
+        main {
+          padding: 18px;
+        }
+        header,
+        nav {
+          text-align: center;
+        }
+        nav ul {
+          padding: 0px;
+        }
+        header h1 {
+        font-size: 38px;
+        margin: 18px;
+        }
+        img {
+          height: auto;
+          width: 100%;
+        }
+      }
     </style>
  </head>
   <body>
@@ -131,7 +167,7 @@
           <input type="submit" value="click to submit">
         </div>
      <footer>
-       This is a footer.
+       create 2022.
      </footer>
    </div>
   </body>
